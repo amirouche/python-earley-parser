@@ -1,4 +1,4 @@
-red, bold, yellow = lambda x: x
+red = bold = yellow = lambda x: x
 
 
 class ParseItem:

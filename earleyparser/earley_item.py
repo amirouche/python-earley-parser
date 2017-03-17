@@ -1,5 +1,5 @@
 # This Python file uses the following encoding: utf-8
-bold, red, cyan, blue, yellow, bold = lambda x: x
+bold = red = cyan = blue = yellow = bold = lambda x: x
 
 
 class EarleyItem:
