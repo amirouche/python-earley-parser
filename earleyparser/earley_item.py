@@ -1,5 +1,5 @@
 # This Python file uses the following encoding: utf-8
-from tremendous import bold, red, cyan, blue, yellow, bold
+bold, red, cyan, blue, yellow, bold = lambda x: x
 
 
 class EarleyItem:
