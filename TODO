@@ -1,0 +1,4 @@
+ - clean up correctly earley items
+ - change classes to make it more meaningful/more documented
+ - add a dot ouput for the grammar
+ - time the parser

@@ -1,0 +1,4 @@
+needed to run:
+ - evince, but you can replace the rule in python-earley_parser/Makefile
+ - fabulous : « easy_install fabulous »  will do the job
+ - graphviz, this one is though
