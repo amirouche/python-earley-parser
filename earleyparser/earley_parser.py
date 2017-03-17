@@ -1,8 +1,6 @@
 import sys
 import pdb
 
-from tremendous import yellow, bold, red
-
 from grammar import grammar_from_api
 from earley_algorithm import *
 from earley_super_set import EarleySuperSet
@@ -105,15 +103,15 @@ def run():
     pf._print_node_cache()
     pf.output_flat()
 
-    print(bold(yellow(">>>>>>>> <<<<<<<<")))
-    print(bold(yellow(">>> be hold ! <<<")))
-    print(bold(yellow(">>>>>>>> <<<<<<<<")))
+    print(">>>>>>>> <<<<<<<<")
+    print(">>> be hold ! <<<")
+    print(">>>>>>>> <<<<<<<<")
 
     forest = build_parse_tree(pf.root, pf.cache)
 
-    print(bold(yellow(">>>>>>>> <<<<<<<<")))
+    print(">>>>>>>> <<<<<<<<")
     forest[0].show()
-    print(bold(yellow(">>>>>>>> <<<<<<<<")))
+    print((">>>>>>>> <<<<<<<<")
     forest[1].show()
 
     return ess
