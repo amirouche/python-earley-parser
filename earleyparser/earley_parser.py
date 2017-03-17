@@ -111,7 +111,7 @@ def run():
 
     print(">>>>>>>> <<<<<<<<")
     forest[0].show()
-    print((">>>>>>>> <<<<<<<<")
+    print(">>>>>>>> <<<<<<<<")
     forest[1].show()
 
     return ess
