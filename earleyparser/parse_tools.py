@@ -1,4 +1,4 @@
-from tremendous import red, bold, yellow
+red, bold, yellow = lambda x: x
 
 
 class ParseItem:

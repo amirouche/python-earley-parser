@@ -1,5 +1,5 @@
 # This Python file uses the following encoding: utf-8
-from tremendous import yellow, bold, blue, red
+yellow, bold, blue, red = lambda x: x
 
 
 class EarleySuperSet:
