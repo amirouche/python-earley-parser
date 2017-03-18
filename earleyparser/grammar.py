@@ -104,6 +104,11 @@ def grammar_from_text(text):
         rhs = rhs.split()
         grammar.add_rule(lhs, *rhs)
 
+    for token in grammar.tokens:
+        token = grammar.get_or_create_token(token)
+        if not token.rules:
+            grammar.add_rule(token.symbole)
+
     return grammar
 
 if __name__ == "__main__":

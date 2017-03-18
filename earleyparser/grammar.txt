@@ -13,8 +13,3 @@ PRO -> le
 D -> le
 N -> voile
 V -> voile
-la -> 
-petite -> 
-ferme -> 
-le -> 
-voile -> 
