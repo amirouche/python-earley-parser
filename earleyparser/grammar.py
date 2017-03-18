@@ -29,46 +29,45 @@ class Grammar:
 
     def show_flat(self):
         for token in self.tokens.keys():
-            for regle in self.tokens[token].rules:
-                lhs = regle.lhs.symbole
-                rhs = [e.symbole for e in regle.rhs]
+            for rule in self.tokens[token].rules:
+                lhs = rule.lhs.symbole
+                rhs = [e.symbole for e in rule.rhs]
                 print("%s -> %s" % (lhs, " ".join(rhs)))
 
-    def add_token(self, token):
-        if token not in self.tokens.keys():
+    def get_or_create_token(self, token):
+        try:
+            return self.tokens[token]
+        except KeyError:
             self.tokens[token] = Token(token)
-
-    def get_token(self, token):
-        return self.tokens.get(token, None)
+            return self.tokens[token]
 
     def get_rules(self, token):
         return self.tokens[token].rules
 
-    def add_rule(self, lhs, *rhs):  # left_handle_side, right_*
-        token = self.get_token(lhs)
-        rhs = [self.get_token(rhs_item) for rhs_item in rhs]
-        lhs = self.get_token(lhs)
-        regle = Rule(lhs, rhs)
-        token.rules.add(regle)
+    def add_rule(self, lhs, *rhs):  # left_handle_side, right_handle_side
+        """This adds production rules in the form:
+
+        ```
+        lhs -> rhs
+        ```
+        
+        E.g.
+
+        ```
+        S -> H
+        H -> GN GV
+        ```
+
+        Where lhs is a token and rhs is list of token.
+        """
+        lhs = self.get_or_create_token(lhs)
+        rhs = [self.get_or_create_token(rhs_item) for rhs_item in rhs]
+        rule = Rule(lhs, rhs)
+        lhs.rules.add(rule)
 
 
 def grammar_from_api():
     grammar = Grammar("petite_ferme")
-
-    grammar.add_token("H")
-    grammar.add_token("S")
-    grammar.add_token("GN")
-    grammar.add_token("GV")
-    grammar.add_token("D")
-    grammar.add_token("ADJ")
-    grammar.add_token("N")
-    grammar.add_token("PRO")
-    grammar.add_token("V")
-    grammar.add_token("la")
-    grammar.add_token("petite")
-    grammar.add_token("ferme")
-    grammar.add_token("le")
-    grammar.add_token("voile")
 
     grammar.add_rule("S", "H")
     grammar.add_rule("H", "GN", "GV")
