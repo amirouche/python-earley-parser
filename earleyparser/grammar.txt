@@ -1,0 +1,20 @@
+S -> GN GV
+GN -> D ADJ N
+GN -> D N
+GN -> PRO
+GV -> PRO V
+GV -> V GN
+D -> la
+N -> petite
+ADJ -> petite
+N -> ferme
+V -> ferme
+PRO -> le
+D -> le
+N -> voile
+V -> voile
+la -> 
+petite -> 
+ferme -> 
+le -> 
+voile -> 

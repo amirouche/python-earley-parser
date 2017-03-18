@@ -50,7 +50,7 @@ class Grammar:
         ```
         lhs -> rhs
         ```
-        
+
         E.g.
 
         ```
@@ -90,6 +90,19 @@ def grammar_from_api():
     grammar.add_rule("ferme")
     grammar.add_rule("le")
     grammar.add_rule("voile")
+
+    return grammar
+
+
+def grammar_from_text(text):
+    grammar = Grammar("Grammar from input text")
+
+    for line in text.split('\n'):
+        if not line or line.startswith('#'):
+            continue
+        lhs, rhs = line.split(' -> ')
+        rhs = rhs.split()
+        grammar.add_rule(lhs, *rhs)
 
     return grammar
 
