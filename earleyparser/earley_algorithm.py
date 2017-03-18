@@ -1,21 +1,31 @@
 from earley_item import EarleyItem as Item
-import pdb
+from earley_super_set import EarleySuperSet
 
 
-def initialisation(ess):
-    rulesS = ess.grammar.get_rules("S")
+def parser(grammar, phrase):
+    ess = EarleySuperSet(grammar, phrase)
+    rules = ess.grammar.get_rules("S")
 
-    for rule in rulesS:  # there should be only one start rule but...
+    for rule in rules:
         item = Item()
         item.set_rule(rule)
         item.type = prediction.__name__
         ess.add(item)
+
+    for item in ess.items:
+        if(not completion(ess, item)):
+            if(not scanning(ess, item)):
+                prediction(ess, item)
+
+    ess.post_process_items()
+    return ess
+
+
+def initialisation(ess):
     return ess
 
 
 def prediction(ess, item):
-    #item.show();import pdb; pdb.set_trace()
-
     if not item.rule.is_terminal() and not item.is_scan_complete():
         # it's a non terminal token
         rules = item.rule.rhs[item.position].rules

@@ -1,5 +1,5 @@
 digraph {
-"<0|S[0..0] -> -> ø H[0..None]|0>[prediction]{0}❤" -> "<0|H[0..0] -> -> ø GN[0..None] GV[0..None]|0>[prediction]{1}❤";
+"<0|S[0..0] -> -> ø H[0..None]|0>[None]{0}❤" -> "<0|H[0..0] -> -> ø GN[0..None] GV[0..None]|0>[prediction]{1}❤";
 "<0|H[0..0] -> -> ø GN[0..None] GV[0..None]|0>[prediction]{1}❤" -> "<0|GN[0..0] -> -> ø D[0..None] N[0..None]|0>[prediction]{2}❤";
 "<0|H[0..0] -> -> ø GN[0..None] GV[0..None]|0>[prediction]{1}❤" -> "<0|GN[0..0] -> -> ø D[0..None] ADJ[0..None] N[0..None]|0>[prediction]{3}❤";
 "<0|H[0..0] -> -> ø GN[0..None] GV[0..None]|0>[prediction]{1}❤" -> "<0|GN[0..0] -> -> ø PRO[0..None]|0>[prediction]{4}";

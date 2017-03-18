@@ -1,3 +1,6 @@
+from __future__ import print_function
+
+
 red = bold = yellow = lambda x: x
 
 
@@ -26,14 +29,11 @@ class ParseItem:
             return False
         return True
 
-    def get_string(node):
-        return "%s[%s..%s]" % (node.symbole, str(node.start), str(node.end))
-
     def __hash__(self):
         return id(self)
 
     def __repr__(self):
-        return self.get_string()
+        return "%s[%s..%s]" % (self.symbole, str(self.start), str(self.end))
 
 
 class ParseRule:
@@ -54,17 +54,14 @@ class ParseRule:
                 return False
         return True
 
-    def get_string(self):
-        lhs_string = "%s" % self.lhs.get_string()
-        rhs = [rhs_item.get_string() for rhs_item in self.rhs]
-        rhs_string = " ".join(rhs)
-        return lhs_string + " -> " + rhs_string
-
     def __hash__(self):
         return id(self)
 
     def __repr__(self):
-        return self.get_string()
+        lhs_string = str(self.lhs)
+        rhs = [str(rhs_item) for rhs_item in self.rhs]
+        rhs_string = " ".join(rhs)
+        return lhs_string + " -> " + rhs_string
 
 
 class ParseRuleSet:
@@ -85,7 +82,7 @@ class ParseRuleSet:
         for key in self.cache.keys():
             print(bold(red("# %s" % key)))
             for item in self.cache[key]:
-                print(yellow("## %s" % item.get_string()))
+                print(yellow("## %s" % str(item)))
 
     def __build_tree_nodes__(self):
         for item in self.ess.items:
@@ -128,7 +125,7 @@ class ParseRuleSet:
                         self.tree_nodes.append(node)
 
                         # update cache :
-                        node_string = node.lhs.get_string()
+                        node_string = str(node.lhs)
                         node_list = self.cache.get(node_string, [])
                         if node_list:
                             node_list.append(node)
@@ -148,6 +145,6 @@ class ParseRuleSet:
             return item
 
     def output_flat(self):
-        print("root node : %s " % self.root.get_string())
+        print('root node : ', self.root)
         for node in self.tree_nodes:
-            print(node.get_string())
+            print(node)

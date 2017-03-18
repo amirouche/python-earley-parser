@@ -1,0 +1,1218 @@
+# item index : 0
+# S[0..0] -> -> ø H[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5a4dd0>
+# keep
+## position: 0
+## start: 0
+## end: 0
+## keep: True
+## type: None
+## rule: S -> H
+## parents: []
+## intervals [None]
+
+
+# item index : 1
+# H[0..0] -> -> ø GN[0..None] GV[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5a4e60>
+# keep
+## position: 0
+## start: 0
+## end: 0
+## keep: True
+## type: prediction
+## rule: H -> GN GV
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5a4dd0>]
+## intervals [None, None]
+
+
+# item index : 2
+# GN[0..0] -> -> ø D[0..None] N[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5a4ef0>
+# keep
+## position: 0
+## start: 0
+## end: 0
+## keep: True
+## type: prediction
+## rule: GN -> D N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5a4e60>]
+## intervals [None, None]
+
+
+# item index : 3
+# GN[0..0] -> -> ø D[0..None] ADJ[0..None] N[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5a4f80>
+# keep
+## position: 0
+## start: 0
+## end: 0
+## keep: True
+## type: prediction
+## rule: GN -> D ADJ N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5a4e60>]
+## intervals [None, None, None]
+
+
+# item index : 4
+# GN[0..0] -> -> ø PRO[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad050>
+# don't keep
+## position: 0
+## start: 0
+## end: 0
+## keep: False
+## type: prediction
+## rule: GN -> PRO
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5a4e60>]
+## intervals [None]
+
+
+# item index : 5
+# D[0..0] -> -> ø la[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad0e0>
+# keep
+## position: 0
+## start: 0
+## end: 0
+## keep: True
+## type: prediction
+## rule: D -> la
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5a4ef0>, <earley_item.EarleyItem instance at 0x7f30cd5a4f80>]
+## intervals [None]
+
+
+# item index : 6
+# D[0..0] -> -> ø le[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad170>
+# don't keep
+## position: 0
+## start: 0
+## end: 0
+## keep: False
+## type: prediction
+## rule: D -> le
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5a4ef0>, <earley_item.EarleyItem instance at 0x7f30cd5a4f80>]
+## intervals [None]
+
+
+# item index : 7
+# PRO[0..0] -> -> ø le[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad290>
+# don't keep
+## position: 0
+## start: 0
+## end: 0
+## keep: False
+## type: prediction
+## rule: PRO -> le
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad050>]
+## intervals [None]
+
+
+# item index : 8
+# la[0..0] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5ad320>
+# keep
+## position: 0
+## start: 0
+## end: 0
+## keep: True
+## type: prediction
+## rule: la -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad0e0>]
+## intervals []
+
+
+# item index : 9
+# le[0..0] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5ad3b0>
+# don't keep
+## position: 0
+## start: 0
+## end: 0
+## keep: False
+## type: prediction
+## rule: le -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad170>, <earley_item.EarleyItem instance at 0x7f30cd5ad290>]
+## intervals []
+
+
+# item index : 10
+# la[0..1] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5ad440>
+# keep
+## position: 1
+## start: 0
+## end: 1
+## keep: True
+## type: scanning
+## rule: la -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad320>]
+## intervals []
+
+
+# item index : 11
+# D[0..1] -> -> la[0..1] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5ad518>
+# keep
+## position: 1
+## start: 0
+## end: 1
+## keep: True
+## type: completion
+## rule: D -> la
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad440>]
+## intervals [1]
+
+
+# item index : 12
+# GN[0..1] -> -> D[0..1] ø N[2..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad5f0>
+# keep
+## position: 1
+## start: 0
+## end: 1
+## keep: True
+## type: completion
+## rule: GN -> D N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad518>]
+## intervals [1, None]
+
+
+# item index : 13
+# GN[0..1] -> -> D[0..1] ø ADJ[2..None] N[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad6c8>
+# keep
+## position: 1
+## start: 0
+## end: 1
+## keep: True
+## type: completion
+## rule: GN -> D ADJ N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad518>]
+## intervals [1, None, None]
+
+
+# item index : 14
+# N[1..1] -> -> ø petite[1..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad7a0>
+# keep
+## position: 0
+## start: 1
+## end: 1
+## keep: True
+## type: prediction
+## rule: N -> petite
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad5f0>]
+## intervals [None]
+
+
+# item index : 15
+# N[1..1] -> -> ø ferme[1..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad830>
+# don't keep
+## position: 0
+## start: 1
+## end: 1
+## keep: False
+## type: prediction
+## rule: N -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad5f0>]
+## intervals [None]
+
+
+# item index : 16
+# N[1..1] -> -> ø voile[1..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad8c0>
+# don't keep
+## position: 0
+## start: 1
+## end: 1
+## keep: False
+## type: prediction
+## rule: N -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad5f0>]
+## intervals [None]
+
+
+# item index : 17
+# ADJ[1..1] -> -> ø petite[1..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5ad950>
+# keep
+## position: 0
+## start: 1
+## end: 1
+## keep: True
+## type: prediction
+## rule: ADJ -> petite
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad6c8>]
+## intervals [None]
+
+
+# item index : 18
+# petite[1..1] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5ad9e0>
+# keep
+## position: 0
+## start: 1
+## end: 1
+## keep: True
+## type: prediction
+## rule: petite -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad7a0>, <earley_item.EarleyItem instance at 0x7f30cd5ad950>]
+## intervals []
+
+
+# item index : 19
+# ferme[1..1] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5ada70>
+# don't keep
+## position: 0
+## start: 1
+## end: 1
+## keep: False
+## type: prediction
+## rule: ferme -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad830>]
+## intervals []
+
+
+# item index : 20
+# voile[1..1] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5adb00>
+# don't keep
+## position: 0
+## start: 1
+## end: 1
+## keep: False
+## type: prediction
+## rule: voile -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad8c0>]
+## intervals []
+
+
+# item index : 21
+# petite[1..2] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5adb90>
+# keep
+## position: 1
+## start: 1
+## end: 2
+## keep: True
+## type: scanning
+## rule: petite -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ad9e0>]
+## intervals []
+
+
+# item index : 22
+# N[1..2] -> -> petite[1..2] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5adc68>
+# keep
+## position: 1
+## start: 1
+## end: 2
+## keep: True
+## type: completion
+## rule: N -> petite
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adb90>]
+## intervals [2]
+
+
+# item index : 23
+# ADJ[1..2] -> -> petite[1..2] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5add40>
+# keep
+## position: 1
+## start: 1
+## end: 2
+## keep: True
+## type: completion
+## rule: ADJ -> petite
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adb90>]
+## intervals [2]
+
+
+# item index : 24
+# GN[0..2] -> -> D[0..1] N[2..2] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5ade18>
+# keep
+## position: 2
+## start: 0
+## end: 2
+## keep: True
+## type: completion
+## rule: GN -> D N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adc68>]
+## intervals [1, 2]
+
+
+# item index : 25
+# GN[0..2] -> -> D[0..1] ADJ[2..2] ø N[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5adef0>
+# keep
+## position: 2
+## start: 0
+## end: 2
+## keep: True
+## type: completion
+## rule: GN -> D ADJ N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5add40>]
+## intervals [1, 2, None]
+
+
+# item index : 26
+# H[0..2] -> -> GN[0..2] ø GV[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5adfc8>
+# keep
+## position: 1
+## start: 0
+## end: 2
+## keep: True
+## type: completion
+## rule: H -> GN GV
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5ade18>]
+## intervals [2, None]
+
+
+# item index : 27
+# N[2..2] -> -> ø petite[2..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b00e0>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: N -> petite
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adef0>]
+## intervals [None]
+
+
+# item index : 28
+# N[2..2] -> -> ø ferme[2..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0170>
+# keep
+## position: 0
+## start: 2
+## end: 2
+## keep: True
+## type: prediction
+## rule: N -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adef0>]
+## intervals [None]
+
+
+# item index : 29
+# N[2..2] -> -> ø voile[2..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0200>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: N -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adef0>]
+## intervals [None]
+
+
+# item index : 30
+# GV[2..2] -> -> ø PRO[2..None] V[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0290>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: GV -> PRO V
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adfc8>]
+## intervals [None, None]
+
+
+# item index : 31
+# GV[2..2] -> -> ø V[2..None] GN[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0320>
+# keep
+## position: 0
+## start: 2
+## end: 2
+## keep: True
+## type: prediction
+## rule: GV -> V GN
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5adfc8>]
+## intervals [None, None]
+
+
+# item index : 32
+# petite[2..2] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b03b0>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: petite -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b00e0>]
+## intervals []
+
+
+# item index : 33
+# ferme[2..2] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b0440>
+# keep
+## position: 0
+## start: 2
+## end: 2
+## keep: True
+## type: prediction
+## rule: ferme -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0170>, <earley_item.EarleyItem instance at 0x7f30cd5b0680>]
+## intervals []
+
+
+# item index : 34
+# voile[2..2] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b04d0>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: voile -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0200>, <earley_item.EarleyItem instance at 0x7f30cd5b05f0>]
+## intervals []
+
+
+# item index : 35
+# PRO[2..2] -> -> ø le[2..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0560>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: PRO -> le
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0290>]
+## intervals [None]
+
+
+# item index : 36
+# V[2..2] -> -> ø voile[2..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b05f0>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: V -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0320>]
+## intervals [None]
+
+
+# item index : 37
+# V[2..2] -> -> ø ferme[2..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0680>
+# keep
+## position: 0
+## start: 2
+## end: 2
+## keep: True
+## type: prediction
+## rule: V -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0320>]
+## intervals [None]
+
+
+# item index : 38
+# ferme[2..3] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b0710>
+# keep
+## position: 1
+## start: 2
+## end: 3
+## keep: True
+## type: scanning
+## rule: ferme -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0440>]
+## intervals []
+
+
+# item index : 39
+# le[2..2] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b07a0>
+# don't keep
+## position: 0
+## start: 2
+## end: 2
+## keep: False
+## type: prediction
+## rule: le -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0560>]
+## intervals []
+
+
+# item index : 40
+# N[2..3] -> -> ferme[2..3] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b0830>
+# keep
+## position: 1
+## start: 2
+## end: 3
+## keep: True
+## type: completion
+## rule: N -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0710>]
+## intervals [3]
+
+
+# item index : 41
+# V[2..3] -> -> ferme[2..3] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b0998>
+# keep
+## position: 1
+## start: 2
+## end: 3
+## keep: True
+## type: completion
+## rule: V -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0710>]
+## intervals [3]
+
+
+# item index : 42
+# GN[0..3] -> -> D[0..1] ADJ[2..2] N[3..3] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b0a70>
+# keep
+## position: 3
+## start: 0
+## end: 3
+## keep: True
+## type: completion
+## rule: GN -> D ADJ N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0830>]
+## intervals [1, 2, 3]
+
+
+# item index : 43
+# GV[2..3] -> -> V[2..3] ø GN[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0b48>
+# keep
+## position: 1
+## start: 2
+## end: 3
+## keep: True
+## type: completion
+## rule: GV -> V GN
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0998>]
+## intervals [3, None]
+
+
+# item index : 44
+# H[0..3] -> -> GN[0..3] ø GV[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0c20>
+# keep
+## position: 1
+## start: 0
+## end: 3
+## keep: True
+## type: completion
+## rule: H -> GN GV
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0a70>]
+## intervals [3, None]
+
+
+# item index : 45
+# GN[3..3] -> -> ø D[3..None] N[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0cf8>
+# keep
+## position: 0
+## start: 3
+## end: 3
+## keep: True
+## type: prediction
+## rule: GN -> D N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0b48>]
+## intervals [None, None]
+
+
+# item index : 46
+# GN[3..3] -> -> ø D[3..None] ADJ[0..None] N[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0d88>
+# keep
+## position: 0
+## start: 3
+## end: 3
+## keep: True
+## type: prediction
+## rule: GN -> D ADJ N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0b48>]
+## intervals [None, None, None]
+
+
+# item index : 47
+# GN[3..3] -> -> ø PRO[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0e18>
+# keep
+## position: 0
+## start: 3
+## end: 3
+## keep: True
+## type: prediction
+## rule: GN -> PRO
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0b48>]
+## intervals [None]
+
+
+# item index : 48
+# GV[3..3] -> -> ø PRO[3..None] V[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0ea8>
+# keep
+## position: 0
+## start: 3
+## end: 3
+## keep: True
+## type: prediction
+## rule: GV -> PRO V
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0c20>]
+## intervals [None, None]
+
+
+# item index : 49
+# GV[3..3] -> -> ø V[3..None] GN[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0f38>
+# don't keep
+## position: 0
+## start: 3
+## end: 3
+## keep: False
+## type: prediction
+## rule: GV -> V GN
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0c20>]
+## intervals [None, None]
+
+
+# item index : 50
+# D[3..3] -> -> ø la[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b0fc8>
+# don't keep
+## position: 0
+## start: 3
+## end: 3
+## keep: False
+## type: prediction
+## rule: D -> la
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0cf8>, <earley_item.EarleyItem instance at 0x7f30cd5b0d88>]
+## intervals [None]
+
+
+# item index : 51
+# D[3..3] -> -> ø le[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4098>
+# keep
+## position: 0
+## start: 3
+## end: 3
+## keep: True
+## type: prediction
+## rule: D -> le
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0cf8>, <earley_item.EarleyItem instance at 0x7f30cd5b0d88>]
+## intervals [None]
+
+
+# item index : 52
+# PRO[3..3] -> -> ø le[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b41b8>
+# keep
+## position: 0
+## start: 3
+## end: 3
+## keep: True
+## type: prediction
+## rule: PRO -> le
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0e18>, <earley_item.EarleyItem instance at 0x7f30cd5b0ea8>]
+## intervals [None]
+
+
+# item index : 53
+# V[3..3] -> -> ø voile[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4248>
+# don't keep
+## position: 0
+## start: 3
+## end: 3
+## keep: False
+## type: prediction
+## rule: V -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0f38>]
+## intervals [None]
+
+
+# item index : 54
+# V[3..3] -> -> ø ferme[3..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4320>
+# don't keep
+## position: 0
+## start: 3
+## end: 3
+## keep: False
+## type: prediction
+## rule: V -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0f38>]
+## intervals [None]
+
+
+# item index : 55
+# la[3..3] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b43b0>
+# don't keep
+## position: 0
+## start: 3
+## end: 3
+## keep: False
+## type: prediction
+## rule: la -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b0fc8>]
+## intervals []
+
+
+# item index : 56
+# le[3..3] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b4440>
+# keep
+## position: 0
+## start: 3
+## end: 3
+## keep: True
+## type: prediction
+## rule: le -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4098>, <earley_item.EarleyItem instance at 0x7f30cd5b41b8>]
+## intervals []
+
+
+# item index : 57
+# voile[3..3] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b44d0>
+# don't keep
+## position: 0
+## start: 3
+## end: 3
+## keep: False
+## type: prediction
+## rule: voile -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4248>]
+## intervals []
+
+
+# item index : 58
+# ferme[3..3] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b45a8>
+# don't keep
+## position: 0
+## start: 3
+## end: 3
+## keep: False
+## type: prediction
+## rule: ferme -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4320>]
+## intervals []
+
+
+# item index : 59
+# le[3..4] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b4638>
+# keep
+## position: 1
+## start: 3
+## end: 4
+## keep: True
+## type: scanning
+## rule: le -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4440>]
+## intervals []
+
+
+# item index : 60
+# D[3..4] -> -> le[3..4] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b46c8>
+# keep
+## position: 1
+## start: 3
+## end: 4
+## keep: True
+## type: completion
+## rule: D -> le
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4638>]
+## intervals [4]
+
+
+# item index : 61
+# PRO[3..4] -> -> le[3..4] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b47a0>
+# keep
+## position: 1
+## start: 3
+## end: 4
+## keep: True
+## type: completion
+## rule: PRO -> le
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4638>]
+## intervals [4]
+
+
+# item index : 62
+# GN[3..4] -> -> D[3..4] ø N[5..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4878>
+# keep
+## position: 1
+## start: 3
+## end: 4
+## keep: True
+## type: completion
+## rule: GN -> D N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b46c8>]
+## intervals [4, None]
+
+
+# item index : 63
+# GN[3..4] -> -> D[3..4] ø ADJ[5..None] N[0..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4950>
+# don't keep
+## position: 1
+## start: 3
+## end: 4
+## keep: False
+## type: completion
+## rule: GN -> D ADJ N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b46c8>]
+## intervals [4, None, None]
+
+
+# item index : 64
+# GN[3..4] -> -> PRO[3..4] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b4a28>
+# don't keep
+## position: 1
+## start: 3
+## end: 4
+## keep: False
+## type: completion
+## rule: GN -> PRO
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b47a0>]
+## intervals [4]
+
+
+# item index : 65
+# GV[3..4] -> -> PRO[3..4] ø V[5..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4b00>
+# keep
+## position: 1
+## start: 3
+## end: 4
+## keep: True
+## type: completion
+## rule: GV -> PRO V
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b47a0>]
+## intervals [4, None]
+
+
+# item index : 66
+# N[4..4] -> -> ø petite[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4bd8>
+# don't keep
+## position: 0
+## start: 4
+## end: 4
+## keep: False
+## type: prediction
+## rule: N -> petite
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4878>]
+## intervals [None]
+
+
+# item index : 67
+# N[4..4] -> -> ø ferme[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4c68>
+# don't keep
+## position: 0
+## start: 4
+## end: 4
+## keep: False
+## type: prediction
+## rule: N -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4878>]
+## intervals [None]
+
+
+# item index : 68
+# N[4..4] -> -> ø voile[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4cf8>
+# keep
+## position: 0
+## start: 4
+## end: 4
+## keep: True
+## type: prediction
+## rule: N -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4878>]
+## intervals [None]
+
+
+# item index : 69
+# ADJ[4..4] -> -> ø petite[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4d88>
+# don't keep
+## position: 0
+## start: 4
+## end: 4
+## keep: False
+## type: prediction
+## rule: ADJ -> petite
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4950>]
+## intervals [None]
+
+
+# item index : 70
+# GV[2..4] -> -> V[2..3] GN[4..4] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b4e18>
+# don't keep
+## position: 2
+## start: 2
+## end: 4
+## keep: False
+## type: completion
+## rule: GV -> V GN
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4a28>]
+## intervals [3, 4]
+
+
+# item index : 71
+# V[4..4] -> -> ø voile[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4ef0>
+# keep
+## position: 0
+## start: 4
+## end: 4
+## keep: True
+## type: prediction
+## rule: V -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4b00>]
+## intervals [None]
+
+
+# item index : 72
+# V[4..4] -> -> ø ferme[4..None]
+## <earley_item.EarleyItem instance at 0x7f30cd5b4f80>
+# don't keep
+## position: 0
+## start: 4
+## end: 4
+## keep: False
+## type: prediction
+## rule: V -> ferme
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4b00>]
+## intervals [None]
+
+
+# item index : 73
+# petite[4..4] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9050>
+# don't keep
+## position: 0
+## start: 4
+## end: 4
+## keep: False
+## type: prediction
+## rule: petite -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4bd8>, <earley_item.EarleyItem instance at 0x7f30cd5b4d88>]
+## intervals []
+
+
+# item index : 74
+# ferme[4..4] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b90e0>
+# don't keep
+## position: 0
+## start: 4
+## end: 4
+## keep: False
+## type: prediction
+## rule: ferme -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4c68>, <earley_item.EarleyItem instance at 0x7f30cd5b4f80>]
+## intervals []
+
+
+# item index : 75
+# voile[4..4] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9170>
+# keep
+## position: 0
+## start: 4
+## end: 4
+## keep: True
+## type: prediction
+## rule: voile -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4cf8>, <earley_item.EarleyItem instance at 0x7f30cd5b4ef0>]
+## intervals []
+
+
+# item index : 76
+# H[0..4] -> -> GN[0..2] GV[3..4] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9200>
+# don't keep
+## position: 2
+## start: 0
+## end: 4
+## keep: False
+## type: completion
+## rule: H -> GN GV
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b4e18>]
+## intervals [2, 4]
+
+
+# item index : 77
+# voile[4..5] -> -> ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9320>
+# keep
+## position: 1
+## start: 4
+## end: 5
+## keep: True
+## type: scanning
+## rule: voile -> 
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b9170>]
+## intervals []
+
+
+# item index : 78
+# S[0..4] -> -> H[0..4] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9440>
+# don't keep
+## position: 1
+## start: 0
+## end: 4
+## keep: False
+## type: completion
+## rule: S -> H
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b9200>]
+## intervals [4]
+
+
+# item index : 79
+# N[4..5] -> -> voile[4..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9518>
+# keep
+## position: 1
+## start: 4
+## end: 5
+## keep: True
+## type: completion
+## rule: N -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b9320>]
+## intervals [5]
+
+
+# item index : 80
+# V[4..5] -> -> voile[4..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b95f0>
+# keep
+## position: 1
+## start: 4
+## end: 5
+## keep: True
+## type: completion
+## rule: V -> voile
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b9320>]
+## intervals [5]
+
+
+# item index : 81
+# GN[3..5] -> -> D[3..4] N[5..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b96c8>
+# keep
+## position: 2
+## start: 3
+## end: 5
+## keep: True
+## type: completion
+## rule: GN -> D N
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b9518>]
+## intervals [4, 5]
+
+
+# item index : 82
+# GV[3..5] -> -> PRO[3..4] V[5..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b97a0>
+# keep
+## position: 2
+## start: 3
+## end: 5
+## keep: True
+## type: completion
+## rule: GV -> PRO V
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b95f0>]
+## intervals [4, 5]
+
+
+# item index : 83
+# GV[2..5] -> -> V[2..3] GN[4..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9878>
+# keep
+## position: 2
+## start: 2
+## end: 5
+## keep: True
+## type: completion
+## rule: GV -> V GN
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b96c8>]
+## intervals [3, 5]
+
+
+# item index : 84
+# H[0..5] -> -> GN[0..3] GV[4..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9950>
+# keep
+## position: 2
+## start: 0
+## end: 5
+## keep: True
+## type: completion
+## rule: H -> GN GV
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b97a0>]
+## intervals [3, 5]
+
+
+# item index : 85
+# H[0..5] -> -> GN[0..2] GV[3..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9a28>
+# keep
+## position: 2
+## start: 0
+## end: 5
+## keep: True
+## type: completion
+## rule: H -> GN GV
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b9878>]
+## intervals [2, 5]
+
+
+# item index : 86
+# S[0..5] -> -> H[0..5] ø
+## <earley_item.EarleyItem instance at 0x7f30cd5b9b00>
+# keep
+## position: 1
+## start: 0
+## end: 5
+## keep: True
+## type: completion
+## rule: S -> H
+## parents: [<earley_item.EarleyItem instance at 0x7f30cd5b9950>, <earley_item.EarleyItem instance at 0x7f30cd5b9a28>]
+## intervals [5]
+
+
