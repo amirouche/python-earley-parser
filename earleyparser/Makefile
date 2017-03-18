@@ -5,7 +5,7 @@ txt:
 	python earley_parser.py
 
 dot: 
-	python output.py > output.dot
+	python main.py > output.dot
 	dot -Tpdf output.dot -o output.pdf
 	evince output.pdf 
 
