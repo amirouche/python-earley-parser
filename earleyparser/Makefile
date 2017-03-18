@@ -2,8 +2,7 @@ all: dot
 
 
 flat:
-	python earley_parser.py > output.flat
-	less -R output.flat
+	python earley_parser.py
 
 dot: 
 	python output.py > output.dot
