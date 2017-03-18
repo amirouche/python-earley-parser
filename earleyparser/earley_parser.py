@@ -86,7 +86,7 @@ def build_parse_tree(parse_item, cache):
     return parse_trees
 
 
-def run():
+if __name__ == "__main__":
     phrase = "la petite ferme le voile".split(" ")
     grammar = grammar_from_api()
     ess = parser(grammar, phrase)
@@ -113,8 +113,3 @@ def run():
     forest[0].show()
     print(">>>>>>>> <<<<<<<<")
     forest[1].show()
-
-    return ess
-
-if __name__ == "__main__":
-    run()
