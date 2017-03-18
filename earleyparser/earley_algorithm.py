@@ -1,20 +1,23 @@
-from earley_item import EarleyItem as Item
+from earley_item import EarleyItem
 from earley_super_set import EarleySuperSet
 
 
 def parser(grammar, phrase):
     ess = EarleySuperSet(grammar, phrase)
+
+    # init the parse with the root rule
     rules = ess.grammar.get_rules("S")
 
     for rule in rules:
-        item = Item()
+        item = EarleyItem()
         item.set_rule(rule)
         item.type = prediction.__name__
         ess.add(item)
 
+    # exec!
     for item in ess.items:
-        if(not completion(ess, item)):
-            if(not scanning(ess, item)):
+        if not completion(ess, item):
+            if not scanning(ess, item):
                 prediction(ess, item)
 
     ess.post_process_items()
@@ -31,7 +34,7 @@ def prediction(ess, item):
         rules = item.rule.rhs[item.position].rules
         for rule in rules:
             # for each rule we create a new item
-            new = Item()
+            new = EarleyItem()
             new.set_rule(rule)
             new.position = 0
             new.start = item.end
@@ -43,14 +46,13 @@ def prediction(ess, item):
 
 
 def scanning(ess, item):
-    #item.show();import pdb; pdb.set_trace()
 
     if(item.rule.is_terminal()):  # it's terminal rule
         word = ess.phrase[item.end]
         symbole = item.rule.lhs.symbole
 
         if(symbole == word):  # word and symbole match, this rule is scanned
-            new = Item()
+            new = EarleyItem()
             new.type = scanning.__name__
 
             new.set_rule(item.rule)
@@ -64,7 +66,6 @@ def scanning(ess, item):
 
 
 def completion(ess, item):
-    #item.show();import pdb; pdb.set_trace()
 
     if(item.is_scan_complete() and item.type in ("completion", "scanning")):
         symbole = item.rule.lhs.symbole
@@ -82,7 +83,7 @@ def completion(ess, item):
             current_symbole = current.rule.rhs[current.position].symbole
 
             if(item.rule.lhs.symbole == current_symbole):
-                new = Item()
+                new = EarleyItem()
                 new.type = completion.__name__
 
                 new.set_rule(current.rule)
@@ -96,5 +97,7 @@ def completion(ess, item):
                 new.intervals[current.position] = item.end
 
                 ess.add(new, item)
+
         return True
+
     return False

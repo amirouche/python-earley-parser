@@ -76,15 +76,6 @@ class ParseRuleSet:
 
         self.tree = []
 
-        self.__build_tree_nodes__()
-
-    def _print_node_cache(self):
-        for key in self.cache.keys():
-            print(bold(red("# %s" % key)))
-            for item in self.cache[key]:
-                print(yellow("## %s" % str(item)))
-
-    def __build_tree_nodes__(self):
         for item in self.ess.items:
             if item.keep:
                 if item.rule.is_terminal():
@@ -94,7 +85,7 @@ class ParseRuleSet:
                 end = item.end
                 symbole = item.rule.lhs.symbole
 
-                lhs_parse_item = self.__get_parse_item__(start, end, symbole)
+                lhs_parse_item = self.get_parse_item(start, end, symbole)
                 # done!
 
                 # build rhs parse items
@@ -110,7 +101,7 @@ class ParseRuleSet:
                         sane = False
                         break
 
-                    parse_item = self.__get_parse_item__(start, end, symbole)
+                    parse_item = self.get_parse_item(start, end, symbole)
 
                     last = end
 
@@ -132,7 +123,13 @@ class ParseRuleSet:
                         else:
                             self.cache[node_string] = [node]
 
-    def __get_parse_item__(self, start, end, symbole):
+    def _print_node_cache(self):
+        for key in self.cache.keys():
+            print(bold(red("# %s" % key)))
+            for item in self.cache[key]:
+                print(yellow("## %s" % str(item)))
+                
+    def get_parse_item(self, start, end, symbole):
         item = ParseItem(start, end, symbole)
         if item in self.parse_items:
             saved_item_index = self.parse_items.index(item)
