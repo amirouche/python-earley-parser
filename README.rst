@@ -3,7 +3,7 @@ Requirements
 
 - python 2.7
 
-optional but recommanded:
+optional but recommended:
   
 - graphviz and the dot command
 - evince (default) or another pdf reader 
