@@ -1,7 +1,7 @@
-all: dot
+all:
+	@echo "try 'make txt' or 'make dot' if you have graphviz"
 
-
-flat:
+txt:
 	python earley_parser.py
 
 dot: 
